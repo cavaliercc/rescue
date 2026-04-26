@@ -63,3 +63,33 @@ Router guard redirects unauthenticated users to `/login` and authenticated users
 2. Token stored in `localStorage` and Pinia `authStore`
 3. All subsequent requests attach token via axios request interceptor
 4. 401 response → `authStore.logout()` + redirect to `/login`
+
+## Skill & Workflow Reference
+
+### 开发工作流（Vue + Spring Boot）
+| 场景 | 优先使用的 Skill |
+|------|----------------|
+| Vue 3 组件、Pinia、路由开发 | `frontend-patterns` |
+| Spring Boot API、MyBatis-Plus、JWT | `springboot-patterns` |
+| 测试驱动开发（写测试先行） | `tdd-workflow` |
+| 提交、PR、分支管理 | `git-workflow` |
+
+### 调研 & 搜索
+| 场景 | 优先使用的 Skill |
+|------|----------------|
+| 快速搜索技术方案、库文档 | `tavily-search` |
+| 深度研究、竞品分析、行业调研 | `deep-research` |
+
+### 飞书（Lark）集成
+| 场景 | 优先使用的 Skill |
+|------|----------------|
+| 发送消息、机器人通知 | `lark-im` |
+| 文档创建与编辑 | `lark-doc` |
+| 日历事件管理 | `lark-calendar` |
+| 其他飞书能力（审批、任务、表格等） | `lark-approval` / `lark-task` / `lark-sheets` |
+
+### 合规 & 安全
+| 场景 | 优先使用的 Skill |
+|------|----------------|
+| 医疗数据隐私（PHI/HIPAA） | `hipaa-compliance` |
+| DeFi / 链上金融合约安全 | `defi-amm-security` |
