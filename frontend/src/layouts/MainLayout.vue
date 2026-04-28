@@ -18,6 +18,10 @@
           <el-icon><Odometer /></el-icon>
           <template #title>仪表盘</template>
         </el-menu-item>
+        <el-menu-item index="/task">
+          <el-icon><Location /></el-icon>
+          <template #title>任务管理</template>
+        </el-menu-item>
       </el-menu>
     </el-aside>
 
@@ -28,8 +32,7 @@
           <Expand v-else />
         </el-icon>
         <div class="flex items-center gap-4">
-          <span class="text-gray-600 text-sm">{{ authStore.username }}</span>
-          <el-button type="danger" size="small" @click="handleLogout">退出</el-button>
+          <span class="text-gray-600 text-sm">救援管理系统</span>
         </div>
       </el-header>
       <el-main class="bg-gray-50">
@@ -41,20 +44,12 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
-import { useAuthStore } from '@/stores/auth'
+import { useRoute } from 'vue-router'
 
 const route = useRoute()
-const router = useRouter()
-const authStore = useAuthStore()
 const isCollapsed = ref(false)
 
 const activeMenu = computed(() => route.path)
-
-function handleLogout() {
-  authStore.logout()
-  router.push('/login')
-}
 </script>
 
 <style scoped>
